@@ -1,0 +1,491 @@
+#boton-agregar{
+    display: flex;
+    align-items: left;
+    margin-left: 12%;
+    margin-bottom: 2%;
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    /* background: linear-gradient(to bottom, #fff4f7, rgb(254, 171, 174));*/
+    background: linear-gradient(to bottom, #ffdede, rgba(255, 164, 164, 0.642)),url(../img/helado.jpg); background-repeat: repeat;
+
+    height: 100vh;
+    background-size: cover;
+}
+
+ /* Estilo básico para la ventana modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    
+    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.248),rgba(0, 0, 0, 0.472)),url(img/PicsArt_11-26-06.06.57.jpg);*/ 
+    
+     /*background: linear-gradient(to right, rgba(255, 126, 126, 0.222),rgba(255, 192, 192, 0.294)),url(img/PicsArt_11-26-06.06.57.jpg); */
+    background: linear-gradient(to right, rgba(255, 126, 126, 0.557),rgba(0, 0, 0, 0.472)),url(../img/PicsArt_11-26-06.06.57.jpg);     
+    /*background-color: rgba(0, 0, 0, 0.747);*/
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 70%;
+    height: 400px;
+    border-radius: 14px;
+}
+
+.modal-content H2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-top: 1.2px solid rgba(198, 198, 198, 0.703);
+    border-bottom: 1.4px solid rgba(198, 198, 198, 0.572);
+    padding: 20px;
+    /*  border-image: linear-gradient(to right, #ff5f9f7c, #7979799a);
+    border-image-slice: 1;  */ 
+}
+
+
+
+.cake{
+    display: flex;
+    height: 250px;
+    width: 180px;
+    margin-left: 38%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    
+}
+
+.close {
+    border-radius: 50%;
+    padding: 5px;
+    margin-left: 3px;
+}
+
+.btn-modal {
+    display: flex;
+    margin-left: 40%;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    gap: 2px;
+    height: 70px;
+    width: 150px;
+    border: none;
+    background: #a549da3d;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.lable {
+    line-height: 22px;
+    font-size: 19px;
+    color: #A649DA;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    
+}
+
+.btn-modal:hover {
+    background: #a549da62;
+    box-shadow: 0px 7px 8px rgba(45, 45, 45, 0.4);
+    transform: translateY(-7px);
+        font-weight: bold;
+    
+}
+
+
+.wave{
+    height: 1px;
+    background-color: #fdbcbc;
+}
+
+
+.texto{
+    margin-bottom: 5%;
+    margin-left: 25.5%;
+    font-family: 'Parisienne', cursive;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.button1{
+    border: 0.5px solid rgba(0, 255, 242, 0.237);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: hsla(168, 70%, 74%, 0.631);
+    border-radius: 1.75rem;
+    color: #000000;
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);    
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    transition: 0.3s ease;
+}
+
+.button1:hover{
+    background-color: #27d1c993;
+    box-shadow: 0px 7px 8px rgba(45, 45, 45, 0.4);
+    transform: translateY(-7px);
+        .icon{
+            transform: scale(1.1);
+        background-color: #ffffff; 
+        fill: rgb(30, 135, 114);
+        }
+        .text{
+            
+            font-weight: bold;
+        }
+}
+
+.icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: rgb(255, 255, 255);
+    background: #0fb1a9;
+    border-radius: 50%;
+    opacity: 0.8;
+    margin-right: 2px;
+    transition: 0.3s ease;
+}
+
+
+.text{
+    font-family: "SF Pro Text Regular";
+    font-size: 16px;
+    color: #000000;
+    margin: 0 1.2rem;
+    white-space: nowrap; 
+}
+
+.text2{
+    font-family: "SF Pro Text Regular";
+    text-decoration: underline;
+}
+
+form{
+    display: block;
+}
+
+th{
+    text-align: center !important;
+}
+td{
+    text-align: center !important;
+}
+
+/*tabla es lo detras de la tabla xdd*/
+.tabla{
+    background-color:rgba(255, 247, 247, 0.492);
+    /*rgba(188, 188, 188, 0.523)   rgba(255, 233, 197, 0.87)*/
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    margin: 0px 15% 15px 15%;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 18px 0 rgba(149, 149, 149, 0.376);
+}
+
+/* tabla fija */
+.table-desktop
+{
+    margin: auto;
+    width: 80%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 2px rgb(184, 184, 184) dotted;
+    box-shadow: 0 6px 18px 0 rgb(255, 253, 253);
+    
+}
+.table-desktop tr th{
+    background-color: #edc8e2;
+    color: rgb(0, 0, 0);
+    border: 2px dotted #ed78ff;
+    font-family: "SF Pro Text Regular";
+    padding: 5px;
+    text-align: center;
+}
+
+.table-desktop tr td
+{
+    border: 1.6px solid #a3a3a3bb;;
+    padding: 5px;
+}
+.table-desktop tr:nth-of-type(odd)
+{
+    background-color: rgb(255, 255, 255);
+}
+
+.tableMobile
+{
+    display: none;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: rgb(255, 255, 255);
+}
+
+.tableMobile .fila .columna
+{
+    display: flex;
+    
+}
+
+
+.tableMobile .fila .columna .header, .tableMobile .fila .columna .contenido 
+{
+    border: 1px solid #747474;
+    border-bottom: none;
+    padding: 6px;
+    padding-left: 5%;
+    
+}
+
+.tableMobile .fila:nth-of-type(even) .columna .header
+{background-color: rgb(248, 232, 255);
+    
+    
+}
+
+.tableMobile .fila .columna .header
+{
+    width: 40%;
+    
+    background-color: rgb(235, 184, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: solid 1.3px #909090;
+}
+
+.tableMobile .fila .columna .contenido
+{
+    width: 60%;
+}
+
+.tableMobile .fila:nth-of-type(even) .columna .contenido
+{
+    background-color: #e2e2e2;
+}
+.tableMobile .fila .columna :last-of-type .contenido, .tableMobile .fila .columna :last-of-type .header 
+{
+    border-bottom: solid 1px #909090;
+}
+
+/*Boton eliminar*/
+.button {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: .3s;
+}
+
+.svgIcon path {
+fill: white;
+}
+
+.button:hover {
+    margin-left: 0px;
+    width: 90px;
+    border-radius: 50px;
+    transition-duration: .3s;
+    background-color: rgba(227, 64, 49, 0.894);
+    align-items: center;
+}
+
+.button:hover .svgIcon {
+    width: 50px;
+    transition-duration: .3s;
+    transform: translateY(60%);
+}
+
+.button::before {
+    position: absolute;
+    top: -20px;
+    content: "Borrar";
+    color: white;
+    transition-duration: .3s;
+    font-size: 2px;
+}
+
+.button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-duration: .3s;
+}
+
+.edit-button {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none !important;
+}
+
+.edit-svgIcon {
+    width: 17px;
+    transition-duration: 0.3s;
+}
+
+.edit-svgIcon path {
+    fill: white;
+}
+
+.edit-button:hover {
+    width: 90px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    margin-left: 0px;
+    background-color: rgb(234, 122, 91);
+    align-items: center;
+}
+
+.edit-button:hover .edit-svgIcon {
+    width: 20px;
+    transition-duration: 0.3s;
+    transform: translateY(60%);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.edit-button::before {
+    display: none;
+    content: "Editar";
+    color: white;
+    text-decoration: underline 1.5px;
+    transition-duration: 0.3s;
+    font-size: 2px;
+}
+
+.edit-button:hover::before {
+    display: block;
+    padding-right: 10px;
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(0px);
+    transition-duration: 0.3s;
+}
+
+
+@media(max-width: 760px)
+{
+    .tableMobile
+    {
+        display: block;
+    }   
+    .table-desktop
+    {
+        display: none;
+    }
+    body{
+        background: linear-gradient(to bottom, #ffd8e2bc, rgba(237, 183, 231, 0.775)),url(../img/helado.jpg); background-repeat: repeat;
+    }
+    .texto{
+        margin-top: 40px;
+        margin-bottom: 30px;
+        margin-left: 16%;   
+        font-size: 45px;    
+        text-decoration: overline rgb(255, 255, 255) wavy;
+    }
+    .button1{
+        font-size: 5px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    .tabla{
+        margin: 0px 6% 15px 6%;
+    }
+    .btn-modal {
+        margin-left: 25%;
+    }
+    .modal-content {
+        height: 400px;
+    }
+    .btn-modal 
+    {
+    height: 55px;
+    margin-left: 37%;
+    }
+    .cake{
+        height: 160px;
+        width: 160px;
+        margin-left: 35%;
+    }
+    .modal-content {
+        height: 400px;
+    }
+}
+
+@media(max-width: 500px)
+{
+    .btn-modal {
+        margin-left: 20%;
+    }
+    .cake{
+        height: 120px;
+        width: 120px;
+        margin-left: 26%;
+    }
+    .modal-content {
+        height: 400px;
+    }
+    .edit-button {
+        float: left;
+        margin-right: 20px;
+    }
+}
+

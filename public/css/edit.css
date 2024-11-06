@@ -1,0 +1,155 @@
+/* *
+{
+    background-color: #FF7F50;
+} */
+body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background: url(../img/fondo1.jpg) no-repeat center center fixed; 
+
+
+    height: 100vh;
+    background-size: cover;
+}
+.table-desktop
+{
+    padding-top: 80px;
+}
+.titulo
+{
+    
+    text-align: center;
+    font-size: x-large;
+    font-family: cursive, sans-serif;
+    font-style: italic;
+}
+
+
+/* tabla fija */ 
+.table-desktop
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-desktop tr th{
+    background-color: #edc8e2;
+    color: white;
+    border: 2px dotted #ed78ff;
+    padding: 5px;
+    text-align: center;
+}
+
+.table-desktop tr td
+{
+    border: 1.6px solid #a3a3a3bb;;
+    padding: 5px;
+}
+.table-desktop tr:nth-of-type(odd)
+{
+    background-color: teal;
+}
+
+/* tabla responsive */
+
+.tableMovile
+{
+    display: none;
+    width: 100%;
+
+
+}
+
+.tableMovile .fila .columna
+{
+    display: flex;
+}
+
+.tableMovile .fila .columna .header, .tableMovile .fila .columna .contenido 
+{
+    border: 1px solid #747474;
+    border-bottom: none;
+    padding: 6px;
+    padding-left: 5%;
+}
+
+.tableMovile .fila .columna .header
+{
+    width: 40%;
+    background-color: rgb(235, 184, 255);
+    color: black;
+    font-weight: bold;
+    border: solid 1.3px #909090;
+}
+
+.tableMovile .fila .columna .contenido
+{
+    width: 60%;
+}
+
+.tableMovile .fila:nth-of-type(even) .columna .contenido
+{
+    background-color: rgb(248, 232, 255);
+}
+.tableMovile .fila .columna :last-of-type .contenido, .tableMovile .fila .columna :last-of-type .header 
+{
+    border-bottom: solid 1px #909090;
+}
+
+button
+{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    transition: background-color 0.3s;
+}
+button:hover 
+{
+    opacity: 0.8;
+}
+.guardar
+{
+    background-color: #2ecc71;
+    color: #fff;
+}
+.cancelar
+{
+    background-color: #f39c12;
+    color: #fff;
+}
+
+#botoncito
+{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    transition: background-color 0.3s;
+}
+#botoncito:hover
+{
+    opacity: 0.5;
+
+}
+@media(max-width: 760px)
+{
+    .tableMovile
+    {
+        display: block;
+    }   
+    .table-desktop
+    {
+        display: none;
+    }
+}

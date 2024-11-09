@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/index.css') }}">
+<link rel="stylesheet" href="{{ asset(path: 'css/index.css') }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 @endsection
 @section('content')
@@ -13,7 +15,7 @@
 </div>
 
 <br><br>
-<h1 class="m-a texto">Lista de Pasteles 
+<h1 class="m-a texto">Lista de Pasteles
 </h1>
 <!--Añadi un div-->
 <div id="boton-agregar" >
@@ -79,6 +81,7 @@
     @endforelse
     
 </table>
+
 @forelse ($pasteles as $pastel)
 <div class="tableMobile">
     <div class="fila">
@@ -135,14 +138,14 @@
                     </button>
                 </form>
                 
-                
-                
             </div>
         </div>
     </div>
 </div>
+
 @empty
 @endforelse
+
 
 
 
@@ -152,4 +155,18 @@
 <script src="https://kit.fontawesome.com/3a8bd5f476.js" crossorigin="anonymous"></script>
 
 @endsection
+<footer class="footer">
+    <div class="social-links"> Nuestras redes sociales:
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</footer>
+
 @endsection

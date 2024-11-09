@@ -14,6 +14,7 @@ class Pastel extends Model
         "tamano",
         "sabor",
         "pisos",
-        "precio"
+        "precio",
+        "imagen"
     ];
 }

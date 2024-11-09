@@ -50,6 +50,13 @@
                         <span class="error text-danger" for="input-precio">{{$errors->first('precio')}}</span>
                     @endif
                     <br>
+
+                    <label for="imagen">Imagen:</label><br>
+                    <input type="file" name="imagen" id="imagen"><br>
+                    @if ($errors->has('imagen'))
+                        <span class="error text-danger" for="input-imagen">{{ $errors->first('imagen') }}</span>
+                    @endif
+                    <br>
     
                     <button type="submit" style="background-color: #ffedcc;">Añadir</button>
                     <br>

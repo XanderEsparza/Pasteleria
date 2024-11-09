@@ -25,3 +25,6 @@ Route::get('/pastel/edit/{pastel}', [PastelController::class, 'edit'])->name('pa
 Route::put('/pastel/update/{pastel}', [PastelController::class, 'update'])->name('pastel.update');
 Route::get('/pastel/show/{pastel}', [PastelController::class, 'show'])->name('pastel.show');
 Route::delete('/pastel/destroy/{pastel}', [PastelController::class, 'destroy'])->name('pastel.destroy');
+
+Route::get('/imagen/{id}', [PastelController::class, 'mostrarImagen'])->name('pastel.mostrarImagen');
+

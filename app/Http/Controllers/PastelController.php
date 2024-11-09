@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Pastel;
 use App\Http\Requests\CreatePastelRequest;
 
@@ -21,8 +22,16 @@ class PastelController extends Controller
 
     public function store(CreatePastelRequest $request)
     {
-        Pastel::create($request->all());
-        return redirect() -> route('pastel.index');
+        $pastelData = $request->all();
+
+        if ($request->hasFile('imagen')) {
+            $pastelData['imagen'] = $request->file('imagen')->getRealPath();
+        }
+
+        Pastel::create($pastelData);
+
+        return redirect()->route('pastel.index');
+        
     }
 
     public function edit(Pastel $pastel)
@@ -32,13 +41,33 @@ class PastelController extends Controller
 
     public function update(CreatePastelRequest $request, Pastel $pastel)
     {
-        $pastel->update($request->all());
-        return redirect() -> route("pastel.index");
+        $pastelData = $request->all();
+
+        if ($request->hasFile('imagen')) {
+            $pastelData['imagen'] = $request->file('imagen')->getRealPath();
+        }
+
+        $pastel->update($pastelData);
+
+        return redirect()->route('pastel.index');
     }
 
     public function show(Pastel $pastel)
     {
         return view('pastel.show', compact('pastel'));
+    }
+
+    public function mostrarImagen($id)
+    {
+        $pastel = Pastel::findOrFail($id);
+
+        $rutaImagen = $pastel->imagen;
+
+        if (file_exists($rutaImagen)) {
+            return response()->file($rutaImagen);
+        } else {
+            abort(404, 'Imagen no encontrada.');
+        }
     }
 
     public function destroy(Pastel $pastel)

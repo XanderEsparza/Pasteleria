@@ -35,6 +35,7 @@
             <th>Sabor</th>
             <th>Pisos</th>
             <th>Precio</th>
+            <th>Imagen</th>
             <th colspan="2" class="text-center">Acciones</th>
         </thead>
         @forelse ($pasteles as $pastel)
@@ -44,6 +45,13 @@
             <td>{{ $pastel->sabor }}</td>
             <td>{{ $pastel->pisos }}</td>
             <td>{{ $pastel->precio }}</td>
+            <td>
+                @if($pastel->imagen)
+                    <img src="{{ asset('storage/' . $pastel->imagen) }}" alt="Imagen de {{ $pastel->nombre }}" width="100" height="100">
+                @else
+                    <p>No image</p>
+                @endif
+            </td>
             
             <!--Boton Editar-->
             <td><a href="{{ route('pastel.edit', $pastel->id)}}" class="edit-button">
@@ -113,6 +121,13 @@
         <div class="columna">
             <div class="header">PRECIO</div>
             <div class="contenido">{{ $pastel->precio }}</div>
+        </div>
+    </div>
+
+    <div class="fila">
+        <div class="columna">
+            <div class="header">IMAGEN</div>
+            <div class="contenido">{{ $pastel->imagen }}</div>
         </div>
     </div>
     

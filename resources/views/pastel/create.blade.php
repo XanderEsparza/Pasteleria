@@ -7,9 +7,9 @@
 @section('content')
 <div class="container mt-4">
     <div class="center-box">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-8">
-                <form action="{{ route('pastel.store') }}" method="POST" class="form-container">
+        <div class="row">
+            <div class="col-md-6">
+                <form action="{{ route('pastel.store') }}" method="POST" class="left-align-form">
                     @csrf
                     <label for="nombre">Nombre:</label>
                     <input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}">
@@ -50,7 +50,7 @@
                     <a href="{{ route('pastel.index') }}" class="back-link">Volver</a>
                 </form>
             </div>
-            <div class="col-lg-6 col-md-4 d-flex justify-content-center align-items-center">
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
                 <img src="{{ asset('img/siuuuuu.png') }}" alt="Pastel" class="responsive-image">
             </div>
         </div>

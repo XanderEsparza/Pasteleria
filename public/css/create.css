@@ -1,11 +1,24 @@
+/* Aplicando una fuente amigable */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f4f1;
+  color: #4f4f4f;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 .center-box {
   padding: 60px 30px;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .form-container {
@@ -18,6 +31,16 @@ input, select, button {
   width: 100%;
   max-width: 400px;
   margin: 10px 0;
+  padding: 12px;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .submit-button {
@@ -25,7 +48,7 @@ input, select, button {
   border: none;
   padding: 10px;
   border-radius: 10px;
-  cursor: pointer;
+  font-weight: 600;
   transition: background-color 0.3s ease;
 }
 
@@ -35,7 +58,7 @@ input, select, button {
 
 .back-link {
   margin-top: 20px;
-  color: #333;
+  color: #8e8e8e;
   text-align: center;
   display: block;
 }
@@ -45,4 +68,5 @@ input, select, button {
   height: auto;
   padding: 10px;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

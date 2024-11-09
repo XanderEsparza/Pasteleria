@@ -1,72 +1,129 @@
-/* Aplicando una fuente amigable */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
+/* Configuración general y estilo del cuerpo */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f9f4f1;
-  color: #4f4f4f;
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f5;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
+  padding: 20px;
 }
 
+/* Caja central del formulario */
 .center-box {
-  padding: 60px 30px;
-  border-radius: 20px;
+  padding: 40px;
+  border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #f7c5d5;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.form-container {
+/* Formulario alineado a la izquierda */
+.left-align-form {
+  width: 100%;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
+  padding: 20px;
 }
 
-input, select, button {
+.left-align-form label,
+.left-align-form input,
+.left-align-form select,
+.left-align-form button,
+.left-align-form a {
   width: 100%;
-  max-width: 400px;
-  margin: 10px 0;
-  padding: 12px;
-  border: 2px solid #e5e5e5;
-  border-radius: 10px;
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
 }
 
-button {
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+label {
+  font-weight: bold;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 .submit-button {
   background-color: #ffedcc;
-  border: none;
+  color: #333;
   padding: 10px;
-  border-radius: 10px;
-  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-  background-color: #e6d2bf;
+  background-color: #ffda99;
 }
 
 .back-link {
-  margin-top: 20px;
-  color: #8e8e8e;
   text-align: center;
-  display: block;
+  color: #333;
+  font-size: 14px;
 }
 
 .responsive-image {
   max-width: 100%;
   height: auto;
-  padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón de regreso */
+.button {
+  display: block;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #F0EEEF;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #96daf0;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .center-box {
+      padding: 20px;
+  }
+
+  .left-align-form {
+      width: 100%;
+  }
+
+  input,
+  select,
+  .submit-button {
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .center-box {
+      padding: 15px;
+  }
+
+  .submit-button {
+      font-size: 14px;
+  }
+
+  .back-link {
+      font-size: 12px;
+  }
 }

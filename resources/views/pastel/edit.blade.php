@@ -73,7 +73,12 @@
           <div class="fila">
             <div class="columna">
               <div class="header">TAMAÑO</div>
-              <div class="contenido"><input class="" type="text" name="tamano" id="" value="{{ $pastel->tamano }}"></div>
+              <div class="contenido"><select name="tamano" id="">
+                    <option value="{{ $pastel->tamano }}">{{ $pastel->tamano }}</option>
+                    <option value="Chico">Chico</option>
+                    <option value="Mediano">Mediano</option>
+                    <option value="Grande">Grande</option>
+                </select></div>
             </div>
           </div>
 

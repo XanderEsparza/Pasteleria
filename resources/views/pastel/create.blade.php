@@ -6,19 +6,18 @@
 
 @section('content')
 <div class="container mt-4">
-    <div class="center-box" style="background-color: #f7c5d5;">
-        <div class="row">
-            <div class="col-md-6">
-                <form action="{{ route('pastel.store') }}" method="POST" class="left-align-form">
+    <div class="center-box">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <form action="{{ route('pastel.store') }}" method="POST" class="form-container">
                     @csrf
-                    <label for="nombre">Nombre:</label><br>
-                    <input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}"><br>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}">
                     @if ($errors->has('nombre'))
-                        <span class="error text-danger" for="input-nombre">{{$errors->first('nombre')}}</span>
+                        <span class="error text-danger">{{$errors->first('nombre')}}</span>
                     @endif
-                    <br>
 
-                    <label for="tamano">Tamaño:</label><br>
+                    <label for="tamano">Tamaño:</label>
                     <select name="tamano" id="tamano">
                         <option value="{{ old('tamano') }}">{{ old('tamano') }}</option>
                         <option value="Chico">Chico</option>
@@ -26,40 +25,33 @@
                         <option value="Grande">Grande</option>
                     </select>
                     @if ($errors->has('tamano'))
-                        <span class="error text-danger" for="input-tamano">{{$errors->first('tamano')}}</span>
+                        <span class="error text-danger">{{$errors->first('tamano')}}</span>
                     @endif
-                    <br>
-    
-                    <label for="sabor">Sabor:</label><br>
-                    <input type="text" name="sabor" id="sabor" value="{{ old('sabor') }}"><br>
+
+                    <label for="sabor">Sabor:</label>
+                    <input type="text" name="sabor" id="sabor" value="{{ old('sabor') }}">
                     @if ($errors->has('sabor'))
-                        <span class="error text-danger" for="input-sabor">{{$errors->first('sabor')}}</span>
+                        <span class="error text-danger">{{$errors->first('sabor')}}</span>
                     @endif
-                    <br>
-    
-                    <label for="pisos">Pisos:</label><br>
-                    <input type="number" name="pisos" id="pisos" value="{{ old('pisos') }}"><br>
+
+                    <label for="pisos">Pisos:</label>
+                    <input type="number" name="pisos" id="pisos" value="{{ old('pisos') }}">
                     @if ($errors->has('pisos'))
-                        <span class="error text-danger" for="input-pisos">{{$errors->first('pisos')}}</span>
+                        <span class="error text-danger">{{$errors->first('pisos')}}</span>
                     @endif
-                    <br>
-    
-                    <label for="precio">Precio:</label><br>
-                    <input type="number" name="precio" id="precio" step="any" value="{{ old('precio') }}"><br>
+
+                    <label for="precio">Precio:</label>
+                    <input type="number" name="precio" id="precio" step="any" value="{{ old('precio') }}">
                     @if ($errors->has('precio'))
-                        <span class="error text-danger" for="input-precio">{{$errors->first('precio')}}</span>
+                        <span class="error text-danger">{{$errors->first('precio')}}</span>
                     @endif
-                    <br>
-    
-                    <button type="submit" style="background-color: #ffedcc;">Añadir</button>
-                    <br>
-                    <a href="{{ route('pastel.index') }}">
-                        Volver 
-                    </a>                  
+
+                    <button type="submit" class="submit-button">Añadir</button>
+                    <a href="{{ route('pastel.index') }}" class="back-link">Volver</a>
                 </form>
             </div>
-            <div class="col-md-6 d-flex justify-content-center align-items-center">
-                <img src="{{ asset('img/siuuuuu.png') }}" alt="Pastel" style="max-width: 100%; height: auto;">
+            <div class="col-lg-6 col-md-4 d-flex justify-content-center align-items-center">
+                <img src="{{ asset('img/siuuuuu.png') }}" alt="Pastel" class="responsive-image">
             </div>
         </div>
     </div>

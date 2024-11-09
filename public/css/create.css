@@ -1,8 +1,7 @@
-/* Configuración general y estilo del cuerpo */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Dancing Script', cursive; /* Cambié la fuente a Dancing Script */
+  font-family: 'Dancing Script', cursive;
   background-color: #f0f0f5;
 }
 
@@ -12,7 +11,6 @@ body {
   padding: 20px;
 }
 
-/* Caja central del formulario */
 .center-box {
   padding: 40px;
   border-radius: 10px;
@@ -23,7 +21,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* Formulario alineado a la izquierda */
 .left-align-form {
   width: 100%;
   max-width: 500px;
@@ -80,7 +77,6 @@ select {
   border-radius: 10px;
 }
 
-/* Botón de regreso */
 .button {
   display: block;
   width: 56px;
@@ -97,7 +93,6 @@ select {
   background: #96daf0;
 }
 
-/* Media Queries para Responsividad */
 @media (max-width: 768px) {
   .center-box {
       padding: 20px;

@@ -209,8 +209,8 @@ td{
     box-shadow: 0 6px 18px 0 rgba(149, 149, 149, 0.376);
 }
 
-/* tabla fija */
-.table-desktop
+/* /* tabla fija */
+/*.table-desktop
 {
     margin: auto;
     width: 80%;
@@ -239,7 +239,7 @@ td{
     background-color: rgb(255, 255, 255);
 }
 
-.tableMobile
+/* .tableMobile
 {
     display: none;
     width: 90%;
@@ -292,7 +292,7 @@ td{
 .tableMobile .fila .columna :last-of-type .contenido, .tableMobile .fila .columna :last-of-type .header 
 {
     border-bottom: solid 1px #909090;
-}
+} */
 
 /*Boton eliminar*/
 .button {
@@ -421,7 +421,7 @@ fill: white;
 }
 
 
-@media(max-width: 760px)
+/* @media(max-width: 760px)
 {
     .tableMobile
     {
@@ -487,7 +487,7 @@ fill: white;
         float: left;
         margin-right: 20px;
     }
-}
+} */
 
 html, body {
     height: 100%;
@@ -498,10 +498,8 @@ html, body {
 
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    margin-top: 10%;
+    position: static;
+
     width: 100%;
     height: 65px; /* Ajusta la altura según lo necesites */
     background-color: #ffffff;
@@ -523,3 +521,70 @@ footer {
 .footer .social-links a:hover {
     color: #780652;
 }
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1500px;
+    margin: auto;
+
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.card-content p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+

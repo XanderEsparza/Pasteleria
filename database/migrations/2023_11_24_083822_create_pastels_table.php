@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('sabor');
             $table->integer('pisos');
             $table->double('precio');
+            $table->string('imagen')->nullable();
             $table->timestamps();
         });
     }
